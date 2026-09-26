@@ -1,8 +1,13 @@
 ---
 name: incident-postmortem
 description: >
-  Run a live incident and write the postmortem that prevents recurrence. Load when something is broken in production right now (outage, elevated error rate, degraded latency, bad deploy), when writing or reviewing a postmortem or incident report, when the same failure has happened more than once, or when authoring a runbook for an operation a tired person must perform correctly at 3am.
-version: 1.0.0
+  Something is broken in production right now (outage, error spike, degraded latency, bad
+  deploy), or a postmortem or incident report needs writing or reviewing. Runs the live
+  incident and writes the postmortem that prevents recurrence. Also load when the same
+  failure has happened more than once, or when writing a runbook a tired person must get
+  right at 3am.
+metadata:
+  version: "1.0.0"
 ---
 
 # Incident and Postmortem

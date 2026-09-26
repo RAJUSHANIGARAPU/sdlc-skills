@@ -1,11 +1,12 @@
 ---
 name: design-review
 description: >
-  Turn a vague ask into acceptance criteria, write an architecture decision record that can
-  actually be decided, and review someone else's design or proposal. Load when writing or
-  reviewing an ADR, reviewing a design doc / RFC / proposal, choosing between architectural
+  Write or review an ADR, design doc, RFC or proposal; choose between architectural
+  options; or turn a vague ask into acceptance criteria and a decision record that can
+  actually be decided. Load when writing or reviewing a design, weighing architectural
   options, or when a requirement arrives too vague to build against.
-version: 1.0.0
+metadata:
+  version: "1.0.0"
 ---
 
 # Design review

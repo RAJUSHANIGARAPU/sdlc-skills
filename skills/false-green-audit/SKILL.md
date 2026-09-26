@@ -1,16 +1,14 @@
 ---
 name: false-green-audit
 description: >
-  Audit existing tests for false green — assertions that cannot fail, hollow
-  checks (isNotNull as the only assertion), echo mocks that return the value
-  being asserted, expected values that re-implement the production formula,
-  swallowed exceptions, misleading skips/@Disabled, and coverage that overstates
-  what is actually verified. Load when asked whether a test really tests
-  anything, whether a suite would catch a regression, why a bug shipped through
-  a green pipeline, before trusting a passing suite as evidence a feature works,
-  when reviewing a diff whose tests look too easy, or when a coverage or
-  quality gate is passing but the product is broken.
-version: 1.0.0
+  Does this test really test anything? Audits tests for false green: assertions that
+  cannot fail, isNotNull-only checks, echo mocks, expected values re-implementing the
+  production formula, swallowed exceptions, misleading skips/@Disabled, overstated
+  coverage. Load when asking if a suite would catch a regression, why a bug shipped
+  through a green pipeline, before trusting a passing suite, when a diff's tests look too
+  easy, or when a gate passes but the product is broken.
+metadata:
+  version: "1.0.0"
 ---
 
 # False-Green Audit

@@ -5,7 +5,8 @@ description: >
   judging whether a change is breaking, writing release notes or a changelog, planning
   a deprecation and its removal, coordinating bumps across multi-module Maven or
   dependent published packages, or shipping a migration under a rolling deploy.
-version: 1.0.0
+metadata:
+  version: "1.0.0"
 ---
 
 # Release & semver judgment
