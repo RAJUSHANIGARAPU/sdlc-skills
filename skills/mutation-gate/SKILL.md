@@ -1,13 +1,13 @@
 ---
 name: mutation-gate
 description: >
-  Replace line/branch coverage thresholds with mutation-score gates that actually
-  block a build. Load when working with mutation testing (PiTest, Stryker, mutmut,
-  cosmic-ray), when a coverage percentage is being used as a quality signal or a
-  merge condition, when a JaCoCo threshold is being raised or argued about, when
-  coverage looks high but defects still ship, or when auditing a CI quality gate
-  that reports failures without failing the pipeline.
-version: 1.0.0
+  Mutation testing (PiTest, Stryker, mutmut, cosmic-ray) and mutation-score gates that
+  actually block a build, in place of line/branch coverage thresholds. Load when a
+  coverage percentage is used as a quality signal or merge condition, a JaCoCo threshold
+  is raised or argued about, coverage looks high but defects still ship, or a CI quality
+  gate reports failures without failing the pipeline.
+metadata:
+  version: "1.0.0"
 ---
 
 # Mutation gates
@@ -93,9 +93,9 @@ A gate that logs instead of failing is not a gate. Audit the pipeline definition
 | Off the merge path | Runs in a nightly/cron job, or a pipeline outside branch protection | Move to the PR pipeline; mark the check required. |
 | Report nobody reads | Artifact published, no threshold, no owner | Attach a threshold, or stop paying for the run. |
 
-Two empirical checks: delete one assertion, push to a scratch branch, confirm the
-pipeline goes red; then read branch protection — a red build that can still be merged
-is advisory. Bitbucket has no `continue-on-error`, so a step is faked only in-script:
+Two empirical checks: delete one assertion, push to a scratch branch, confirm the run
+goes red; then read branch protection — a red build that can still be merged is
+advisory. Bitbucket has no `continue-on-error`; a step is faked only in-script:
 
 ```yaml
 - step:
@@ -125,7 +125,7 @@ stage('Mutation gate') {
    An aspirational number set on day one gets disabled in week two.
 4. **Never lower a threshold to make a build pass.** A surviving mutant is a missing
    test; if the number must drop, that is a decision with a name and a ticket on it.
-5. **Whole-module runs stay nightly**, gating nothing, purely as a drift signal.
+5. **Whole-module runs stay nightly**, gating nothing — purely a drift signal.
 
 Counter-argument to have ready: mutation runs cost real CI minutes and yield some
 unactionable survivors, so on modules with thin behavioural logic (mappers, plumbing,
