@@ -7,8 +7,8 @@ decided, and whether a release is actually safe to cut.
 
 They are deliberately few. A skill's description is loaded into context in every
 session, so a large collection taxes every conversation whether or not you use it.
-These five were written because nothing published covered them well for a
-JVM/Python/CI stack — not to be comprehensive.
+These five cover the checks I found myself repeating in my own work on a
+JVM/Python/CI stack; they are not meant to be comprehensive.
 
 ## The skills
 
@@ -74,8 +74,8 @@ in which the design fails, not a preference. Say which one you mean.
 
 ### release-semver
 
-Most published tooling in this area generates changelogs. The hard part is judgment: a
-change is breaking if a consumer breaks, and consumers decide that, not you.
+Generating a changelog is the mechanical part. The hard part is judgment: a change is
+breaking if a consumer breaks, and consumers decide that, not you.
 
 The asymmetry rule — for a response you return, adding a field is usually safe and
 removing or narrowing one is breaking; for a request you accept, accepting more is safe
